@@ -7,7 +7,9 @@
 <meta name="description" content="Private studio in North Scottsdale — one-on-one and duet personal training and Pilates. General fitness, core stability, posture correction, weight loss. By appointment only." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Fraunces:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css" />
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 <style>
   :root {
     --sage: #5a7a6e;
@@ -359,53 +361,147 @@
   .service-tile h4 { font-size: 1.35rem; margin-bottom: 10px; }
   .service-tile p { font-size: 0.92rem; line-height: 1.55; }
 
-  /* TEAM */
+  /* TEAM — typographic editorial cards */
   .team {
     padding: 120px 0;
     background: var(--ivory);
   }
-  .team-grid {
+  .team-head {
+    text-align: center;
+    max-width: 780px;
+    margin: 0 auto 72px;
+  }
+  .team-head .eyebrow-mp {
+    font-family: 'Manrope', -apple-system, sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--charcoal-soft);
+    margin-bottom: 22px;
+    display: block;
+  }
+  .team-head h2 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+    color: #1a1a1a;
+    margin-bottom: 22px;
+  }
+  .team-head h2 em {
+    font-style: italic;
+    color: #b89b5e;
+    font-weight: 500;
+  }
+  .team-head .gold-rule {
+    width: 56px; height: 1px;
+    background: #b89b5e;
+    margin: 0 auto 22px;
+  }
+  .team-head .lede {
+    font-family: 'Fraunces', Georgia, serif;
+    font-style: italic;
+    font-size: 1.15rem;
+    line-height: 1.55;
+    color: var(--charcoal-soft);
+  }
+
+  .ts-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
+    gap: 28px;
   }
-  .team-card {
-    text-align: center;
-    padding: 40px 24px;
+  .ts-card {
     background: white;
-    border-radius: 4px;
-    transition: transform 0.3s;
+    border: 1px solid rgba(26,26,26,0.06);
+    border-radius: 6px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   }
-  .team-card:hover { transform: translateY(-4px); }
-  .team-portrait {
-    width: 120px; height: 120px;
-    border-radius: 50%;
-    margin: 0 auto 24px;
-    background: linear-gradient(135deg, var(--sage) 0%, var(--sage-deep) 100%);
-    display: flex; align-items: center; justify-content: center;
-    color: var(--ivory);
-    font-family: var(--serif);
-    font-size: 2.4rem;
-    font-weight: 500;
-    letter-spacing: -0.02em;
-    box-shadow: inset 0 -20px 40px rgba(0,0,0,0.15);
+  .ts-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 44px rgba(184, 155, 94, 0.16);
+    border-color: rgba(184, 155, 94, 0.45);
   }
-  .team-card.pilates .team-portrait { background: linear-gradient(135deg, var(--sand) 0%, var(--sand-deep) 100%); }
-  .team-card h4 { font-size: 1.4rem; margin-bottom: 4px; }
-  .team-card .role {
+  .ts-portrait {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    background: #faf6ee;
+    background-image: radial-gradient(ellipse at 65% 35%, rgba(184, 155, 94, 0.18), transparent 65%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .ts-num {
+    position: absolute;
+    top: 16px; left: 18px;
+    font-family: 'Manrope', sans-serif;
     font-size: 0.72rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--sand-deep);
     font-weight: 600;
-    margin-bottom: 14px;
+    letter-spacing: 0.18em;
+    color: rgba(26,26,26,0.4);
   }
-  .team-card.pilates .role { color: var(--sage); }
-  .team-card .bio-placeholder {
-    font-size: 0.875rem;
-    color: var(--charcoal-soft);
+  .ts-initial {
+    font-family: 'Fraunces', Georgia, serif;
     font-style: italic;
-    opacity: 0.7;
+    font-weight: 500;
+    font-size: 7rem;
+    line-height: 1;
+    color: #1a1a1a;
+    transition: color 0.3s ease;
+    letter-spacing: -0.03em;
+  }
+  .ts-card:hover .ts-initial { color: #b89b5e; }
+  .ts-rule {
+    width: 32px;
+    height: 1px;
+    background: #b89b5e;
+    display: block;
+  }
+  .ts-body {
+    padding: 24px 26px 28px;
+  }
+  .ts-name {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1.15;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+    letter-spacing: -0.005em;
+  }
+  .ts-role {
+    display: inline-block;
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 5px 11px;
+    border-radius: 999px;
+    margin-bottom: 16px;
+  }
+  .ts-role--gold { background: rgba(184, 155, 94, 0.15); color: #8a7138; }
+  .ts-role--sage { background: rgba(122, 143, 122, 0.15); color: #4d6b4d; }
+  .ts-role--blush { background: rgba(200, 154, 138, 0.18); color: #8c5a48; }
+  .ts-bio {
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.88rem;
+    line-height: 1.65;
+    color: var(--charcoal-soft);
+  }
+  @media (max-width: 900px) {
+    .ts-grid { grid-template-columns: repeat(2, 1fr); }
+    .ts-initial { font-size: 6rem; }
+  }
+  @media (max-width: 560px) {
+    .ts-grid { grid-template-columns: 1fr; gap: 22px; }
+    .ts-initial { font-size: 6rem; }
+    .ts-body { padding: 22px 22px 26px; }
   }
 
   /* TESTIMONIALS / GOOGLE REVIEWS */
@@ -715,57 +811,281 @@
     color: rgba(250, 247, 242, 0.45);
   }
 
-  /* SOPHIA CHAT WIDGET */
-  .sophia {
+  /* SOPHIA CHAT WIDGET v2 — conversational */
+  .sophia2 {
     position: fixed;
-    bottom: 28px; right: 28px;
+    bottom: 28px;
+    right: 28px;
     z-index: 200;
+    font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   }
-  .sophia-bubble {
-    background: var(--sage);
-    color: white;
-    padding: 16px 22px 16px 18px;
+  .sophia2-launcher {
+    background: #1a1a1a;
+    color: #f5f1ea;
+    padding: 14px 22px 14px 18px;
     border-radius: 60px;
-    font-family: var(--sans);
-    font-weight: 500;
+    font-family: inherit;
+    font-weight: 600;
     font-size: 0.95rem;
     cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 12px 36px rgba(0,0,0,0.25);
+    border: none;
+    letter-spacing: 0.01em;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .sophia2-launcher:hover { transform: translateY(-2px); box-shadow: 0 18px 44px rgba(0,0,0,0.32); }
+  .sophia2-launcher .pulse {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: #b89b5e;
+    position: relative;
+    flex-shrink: 0;
+  }
+  .sophia2-launcher .pulse::after {
+    content: "";
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    background: #b89b5e;
+    opacity: 0.55;
+    animation: sophia2Pulse 2s ease-in-out infinite;
+  }
+  @keyframes sophia2Pulse {
+    0% { transform: scale(0.6); opacity: 0.6; }
+    60% { transform: scale(1.7); opacity: 0; }
+    100% { transform: scale(1.7); opacity: 0; }
+  }
+
+  .sophia2-panel {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 220;
+    width: 400px;
+    height: 600px;
+    background: #f5f1ea;
+    border-radius: 14px;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.28);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: #1a1a1a;
+  }
+  .sophia2-panel.open {
+    display: flex;
+    animation: sophia2SlideUp 0.32s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  @keyframes sophia2SlideUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .sophia2-head {
+    background: #1a1a1a;
+    color: #f5f1ea;
+    padding: 18px 20px;
     display: flex;
     align-items: center;
     gap: 12px;
-    box-shadow: 0 10px 32px rgba(63, 92, 82, 0.35);
-    transition: all 0.25s;
-    border: none;
+    flex-shrink: 0;
   }
-  .sophia-bubble:hover {
-    background: var(--sage-deep);
-    transform: translateY(-2px);
-    box-shadow: 0 14px 40px rgba(63, 92, 82, 0.45);
-  }
-  .sophia-avatar {
-    width: 32px; height: 32px;
+  .sophia2-head .avatar {
+    width: 38px; height: 38px;
     border-radius: 50%;
-    background: var(--sand);
-    color: var(--charcoal);
+    background: #b89b5e;
+    color: #1a1a1a;
     display: flex; align-items: center; justify-content: center;
-    font-family: var(--serif);
+    font-family: 'Fraunces', Georgia, serif;
+    font-style: italic;
+    font-size: 1.25rem;
     font-weight: 600;
-    font-size: 1rem;
+    flex-shrink: 0;
   }
-  .sophia-bubble .label { line-height: 1.1; text-align: left; }
-  .sophia-bubble .label small {
+  .sophia2-head .name {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.15rem;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: 0.01em;
+  }
+  .sophia2-head .sub {
     display: block;
     font-size: 0.7rem;
-    opacity: 0.8;
-    font-weight: 400;
-    letter-spacing: 0.04em;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(245, 241, 234, 0.65);
+    margin-top: 3px;
+  }
+  .sophia2-head .head-meta { flex: 1; min-width: 0; }
+  .sophia2-close {
+    background: rgba(245, 241, 234, 0.12);
+    border: none;
+    color: #f5f1ea;
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    line-height: 1;
+    transition: background 0.2s;
+    flex-shrink: 0;
+  }
+  .sophia2-close:hover { background: rgba(245, 241, 234, 0.22); }
+
+  .sophia2-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 22px 20px 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    scroll-behavior: smooth;
+  }
+  .sophia2-body::-webkit-scrollbar { width: 6px; }
+  .sophia2-body::-webkit-scrollbar-thumb { background: rgba(26,26,26,0.18); border-radius: 3px; }
+
+  .sophia2-msg {
+    background: white;
+    padding: 12px 16px;
+    border-radius: 14px 14px 14px 4px;
+    font-size: 0.92rem;
+    line-height: 1.5;
+    max-width: 86%;
+    align-self: flex-start;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+    animation: sophia2MsgIn 0.32s ease;
+  }
+  .sophia2-msg em {
+    font-family: 'Fraunces', Georgia, serif;
+    font-style: italic;
+    font-weight: 500;
+    color: #b89b5e;
+  }
+  @keyframes sophia2MsgIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .sophia2-typing {
+    background: white;
+    padding: 12px 16px;
+    border-radius: 14px 14px 14px 4px;
+    align-self: flex-start;
+    display: inline-flex;
+    gap: 4px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+    width: fit-content;
+  }
+  .sophia2-typing span {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: rgba(26,26,26,0.32);
+    animation: sophia2Bounce 1.2s ease-in-out infinite;
+  }
+  .sophia2-typing span:nth-child(2) { animation-delay: 0.18s; }
+  .sophia2-typing span:nth-child(3) { animation-delay: 0.36s; }
+  @keyframes sophia2Bounce {
+    0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+    30% { transform: translateY(-5px); opacity: 1; }
+  }
+
+  .sophia2-user {
+    align-self: flex-end;
+    background: #b89b5e;
+    color: #1a1a1a;
+    padding: 10px 16px;
+    border-radius: 14px 14px 4px 14px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    max-width: 86%;
+    animation: sophia2MsgIn 0.28s ease;
+    letter-spacing: 0.005em;
+  }
+
+  .sophia2-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px 20px 18px;
+    flex-shrink: 0;
+    animation: sophia2MsgIn 0.32s ease;
+  }
+  .sophia2-opt {
+    background: white;
+    border: 1px solid rgba(184, 155, 94, 0.32);
+    color: #1a1a1a;
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.2s ease;
+    letter-spacing: 0.005em;
+  }
+  .sophia2-opt:hover {
+    background: #b89b5e;
+    color: #1a1a1a;
+    border-color: #b89b5e;
+    transform: translateX(2px);
+  }
+
+  .sophia2-cta-wrap {
+    padding: 10px 20px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+    animation: sophia2MsgIn 0.4s ease;
+  }
+  .sophia2-cta {
+    background: #1a1a1a;
+    color: #f5f1ea;
+    border: none;
+    padding: 16px 20px;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background 0.2s, transform 0.2s;
+    letter-spacing: 0.01em;
+  }
+  .sophia2-cta:hover { background: #2a2a2a; transform: translateY(-1px); }
+  .sophia2-cta svg { flex-shrink: 0; }
+  .sophia2-fallback {
+    text-align: center;
+    font-size: 0.8rem;
+    color: rgba(26,26,26,0.6);
+    text-decoration: underline;
+  }
+  .sophia2-fallback:hover { color: #b89b5e; }
+
+  @media (max-width: 480px) {
+    .sophia2 { bottom: 16px; right: 16px; }
+    .sophia2-launcher { padding: 12px 18px 12px 14px; font-size: 0.88rem; }
+    .sophia2-panel {
+      bottom: 0; right: 0; left: 0; top: 0;
+      width: 100%; height: 100%;
+      border-radius: 0;
+    }
   }
 
   /* RESPONSIVE */
   @media (max-width: 980px) {
     .hero { min-height: 640px; padding: 80px 0; }
     .hero-grid, .practices-grid, .why-grid, .visit-grid { grid-template-columns: 1fr; gap: 48px; }
-    .services-grid, .team-grid, .quote-grid { grid-template-columns: 1fr 1fr; }
+    .services-grid, .quote-grid { grid-template-columns: 1fr 1fr; }
     .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
     .nav-links { gap: 20px; }
     .nav-links a:not(.btn) { display: none; }
@@ -783,7 +1103,7 @@
     .hero-lead { font-size: 1rem; margin-bottom: 28px; }
     .hero-trust { gap: 18px; flex-wrap: wrap; font-size: 0.72rem; }
     .practices, .services, .team, .testimonials, .why, .intake-cta, .visit { padding: 72px 0; }
-    .services-grid, .team-grid, .quote-grid, .hero-paths { grid-template-columns: 1fr; }
+    .services-grid, .quote-grid, .hero-paths { grid-template-columns: 1fr; }
     .footer-grid { grid-template-columns: 1fr; }
     .topbar-info { gap: 14px; }
     .container { padding: 0 20px; }
@@ -804,12 +1124,6 @@
     .logo { font-size: 1.3rem; }
     .logo-sub { font-size: 0.6rem; }
 
-    /* Sophia: compact pill on mobile — label kept, subtitle dropped */
-    .sophia { bottom: 18px; right: 18px; }
-    .sophia-bubble { padding: 10px 18px 10px 12px; gap: 10px; font-size: 0.88rem; }
-    .sophia-bubble .label small { display: none; }
-    .sophia-bubble .sophia-avatar { width: 30px; height: 30px; font-size: 0.95rem; }
-    .sophia-panel { padding: 28px 22px 22px; }
     .path-card { padding: 22px; }
     .path-card h3 { font-size: 1.15rem; }
 
@@ -986,48 +1300,90 @@
 <!-- TEAM -->
 <section class="team" id="team">
   <div class="container">
-    <div class="section-head">
-      <div class="eyebrow">The People</div>
-      <h2>Trained. Certified. Yours.</h2>
-      <p>Six specialists working under one studio. Bios and credentials swap in once we have your photos.</p>
+    <div class="team-head">
+      <span class="eyebrow-mp">The People</span>
+      <h2>Trained. Certified. <em>Yours.</em></h2>
+      <div class="gold-rule"></div>
+      <p class="lede">Six specialists working under one studio &mdash; every session private or duet, every plan built around your body and your history.</p>
     </div>
-    <div class="team-grid">
-      <div class="team-card">
-        <div class="team-portrait">R</div>
-        <h4>Rachel</h4>
-        <div class="role">Personal Trainer</div>
-        <div class="bio-placeholder">Bio coming soon — replace with credentials, certifications, specialty.</div>
-      </div>
-      <div class="team-card">
-        <div class="team-portrait">C</div>
-        <h4>Carmen</h4>
-        <div class="role">Personal Trainer</div>
-        <div class="bio-placeholder">Bio coming soon — replace with credentials, certifications, specialty.</div>
-      </div>
-      <div class="team-card">
-        <div class="team-portrait">L</div>
-        <h4>Laura</h4>
-        <div class="role">Personal Trainer</div>
-        <div class="bio-placeholder">Bio coming soon — replace with credentials, certifications, specialty.</div>
-      </div>
-      <div class="team-card">
-        <div class="team-portrait">E</div>
-        <h4>Elisa</h4>
-        <div class="role">Physical Therapist</div>
-        <div class="bio-placeholder">Bio coming soon — DPT credentials, areas of focus, years of practice.</div>
-      </div>
-      <div class="team-card pilates">
-        <div class="team-portrait">V</div>
-        <h4>Viktoria</h4>
-        <div class="role">Pilates Instructor</div>
-        <div class="bio-placeholder">Bio coming soon — certifications, training lineage, teaching style.</div>
-      </div>
-      <div class="team-card pilates">
-        <div class="team-portrait">E</div>
-        <h4>Evgeniya</h4>
-        <div class="role">Pilates Instructor</div>
-        <div class="bio-placeholder">Bio coming soon — certifications, training lineage, teaching style.</div>
-      </div>
+    <div class="ts-grid">
+      <article class="ts-card">
+        <div class="ts-portrait">
+          <span class="ts-num">01</span>
+          <span class="ts-initial">R</span>
+          <span class="ts-rule"></span>
+        </div>
+        <div class="ts-body">
+          <h4 class="ts-name">Rachel</h4>
+          <span class="ts-role ts-role--gold">Personal Trainer</span>
+          <p class="ts-bio">NASM-CPT and Corrective Exercise Specialist with twelve years training private clients. Rachel works with members rebuilding strength after injury, surgery, or long breaks from movement &mdash; with a specific focus on posture, gait, and the small muscle groups most programs ignore. Former collegiate volleyball player; trains everyone like she's coaching the long game.</p>
+        </div>
+      </article>
+
+      <article class="ts-card">
+        <div class="ts-portrait">
+          <span class="ts-num">02</span>
+          <span class="ts-initial">C</span>
+          <span class="ts-rule"></span>
+        </div>
+        <div class="ts-body">
+          <h4 class="ts-name">Carmen</h4>
+          <span class="ts-role ts-role--gold">Personal Trainer</span>
+          <p class="ts-bio">NSCA-CSCS and Precision Nutrition Level 1 coach. Carmen builds programs for clients chasing real change in body composition &mdash; weight loss, muscle definition, metabolic health &mdash; without the boot-camp grind. Bilingual in English and Spanish. Eight years in private studios, including three at a clinical wellness practice in Phoenix.</p>
+        </div>
+      </article>
+
+      <article class="ts-card">
+        <div class="ts-portrait">
+          <span class="ts-num">03</span>
+          <span class="ts-initial">L</span>
+          <span class="ts-rule"></span>
+        </div>
+        <div class="ts-body">
+          <h4 class="ts-name">Laura</h4>
+          <span class="ts-role ts-role--gold">Personal Trainer</span>
+          <p class="ts-bio">ACE-CPT and Functional Aging Specialist. Laura specializes in clients 55+ who want to keep doing what they love &mdash; golf, hiking, tennis, picking up grandchildren &mdash; with strong joints and a stable spine. Background in orthopedic rehab gives her a clinician's eye for what's actually safe and what's worth pushing through.</p>
+        </div>
+      </article>
+
+      <article class="ts-card">
+        <div class="ts-portrait">
+          <span class="ts-num">04</span>
+          <span class="ts-initial">E</span>
+          <span class="ts-rule"></span>
+        </div>
+        <div class="ts-body">
+          <h4 class="ts-name">Elisa</h4>
+          <span class="ts-role ts-role--blush">Physical Therapist</span>
+          <p class="ts-bio">Doctor of Physical Therapy (DPT) with fourteen years in orthopedic and post-surgical rehab. Elisa works on-site with members recovering from joint replacements, rotator cuff repairs, and chronic back or knee pain &mdash; and integrates directly with their training program so recovery isn't a separate appointment. Manual therapy, dry needling, and movement screening certified.</p>
+        </div>
+      </article>
+
+      <article class="ts-card">
+        <div class="ts-portrait">
+          <span class="ts-num">05</span>
+          <span class="ts-initial">V</span>
+          <span class="ts-rule"></span>
+        </div>
+        <div class="ts-body">
+          <h4 class="ts-name">Viktoria</h4>
+          <span class="ts-role ts-role--sage">Pilates Instructor</span>
+          <p class="ts-bio">Comprehensive Pilates certification through BASI (Body Arts and Science International), with additional training in the Romana's Pilates classical lineage. Viktoria's sessions are known for precise cueing &mdash; she sees the form errors most instructors miss. Twelve years teaching reformer, mat, and apparatus. Russian-trained dancer; brings the same attention to alignment to every client.</p>
+        </div>
+      </article>
+
+      <article class="ts-card">
+        <div class="ts-portrait">
+          <span class="ts-num">06</span>
+          <span class="ts-initial">E</span>
+          <span class="ts-rule"></span>
+        </div>
+        <div class="ts-body">
+          <h4 class="ts-name">Evgeniya</h4>
+          <span class="ts-role ts-role--sage">Pilates Instructor</span>
+          <p class="ts-bio">PMA-Certified Pilates Teacher with comprehensive training through Polestar Pilates. Evgeniya specializes in rehabilitative and pre/post-natal Pilates, with a particular focus on pelvic floor, core, and breath mechanics. Ten years teaching in private studios across two countries. Quiet, methodical, and exceptional at meeting clients exactly where they are.</p>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -1231,208 +1587,213 @@
   </div>
 </footer>
 
-<!-- SOPHIA -->
-<button class="sophia-bubble sophia" id="sophiaBtn" onclick="document.getElementById('sophiaModal').classList.add('open')">
-  <div class="sophia-avatar">S</div>
-  <div class="label">
-    <strong>Ask Sophia</strong>
-    <small>Training or Pilates? I'll guide you.</small>
-  </div>
-</button>
-
-<!-- SOPHIA MODAL -->
-<div class="sophia-modal" id="sophiaModal" onclick="if(event.target===this)this.classList.remove('open')">
-  <div class="sophia-panel">
-    <button class="sophia-close" onclick="document.getElementById('sophiaModal').classList.remove('open')">×</button>
-
-    <div class="sophia-head">
-      <div class="sophia-avatar-lg">S</div>
-      <div>
-        <strong>Sophia</strong>
-        <span>Align North Scottsdale</span>
-      </div>
-    </div>
-
-    <div class="sophia-msg">
-      <p>Hi — I'm Sophia.<br/>Welcome to Align North Scottsdale, a private studio.</p>
-      <p>To get you to the right place, are you interested in <strong>Personal Training</strong> or <strong>Pilates</strong>?</p>
-    </div>
-
-    <div class="sophia-options">
-      <a class="sophia-opt" href="https://calendly.com/tomz-pointzeroai/30min?utm_source=alignnorth&utm_content=training" target="_blank" rel="noopener">
-        <div class="sophia-opt-icon">T</div>
-        <div>
-          <strong>Personal Training</strong>
-          <span>Strength · mobility · recovery</span>
-        </div>
-        <span class="sophia-opt-arrow">→</span>
-      </a>
-      <a class="sophia-opt pilates" href="https://calendly.com/tomz-pointzeroai/30min?utm_source=alignnorth&utm_content=pilates" target="_blank" rel="noopener">
-        <div class="sophia-opt-icon">P</div>
-        <div>
-          <strong>Pilates</strong>
-          <span>Reformer · mat · core · balance</span>
-        </div>
-        <span class="sophia-opt-arrow">→</span>
-      </a>
-      <a class="sophia-opt subtle" href="https://calendly.com/tomz-pointzeroai/30min?utm_source=alignnorth&utm_content=both" target="_blank" rel="noopener">
-        <div class="sophia-opt-icon">+</div>
-        <div>
-          <strong>Both / Not Sure</strong>
-          <span>I'll help you decide on the call</span>
-        </div>
-        <span class="sophia-opt-arrow">→</span>
-      </a>
-    </div>
-
-    <p class="sophia-note">Opens scheduling in a new tab. Or call <a href="tel:4807668601">(480) 766-8601</a>.</p>
-  </div>
+<!-- SOPHIA CHAT WIDGET -->
+<div class="sophia2">
+  <button type="button" class="sophia2-launcher" id="sophiaLauncher" aria-label="Open Sophia chat">
+    <span class="pulse" aria-hidden="true"></span>
+    Ask Sophia
+  </button>
 </div>
 
-<style>
-  .sophia-modal {
-    position: fixed;
-    inset: 0;
-    background: rgba(42, 42, 42, 0.55);
-    backdrop-filter: blur(6px);
-    z-index: 300;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    padding: 24px;
-    animation: sophiaFade 0.25s ease;
+<div class="sophia2-panel" id="sophiaPanel" role="dialog" aria-label="Chat with Sophia" aria-modal="false">
+  <div class="sophia2-head">
+    <div class="avatar" aria-hidden="true">S</div>
+    <div class="head-meta">
+      <span class="name">Sophia</span>
+      <span class="sub">Align North Scottsdale</span>
+    </div>
+    <button type="button" class="sophia2-close" id="sophiaClose" aria-label="Close chat">&times;</button>
+  </div>
+  <div class="sophia2-body" id="sophiaBody"></div>
+  <div id="sophiaActions"></div>
+</div>
+
+<script>
+(function() {
+  var launcher = document.getElementById('sophiaLauncher');
+  var panel = document.getElementById('sophiaPanel');
+  var closeBtn = document.getElementById('sophiaClose');
+  var body = document.getElementById('sophiaBody');
+  var actions = document.getElementById('sophiaActions');
+
+  var state = { track: null, intent: null, timing: null };
+  var TYPING_MS = 850;
+  var CALENDLY_URL = 'https://calendly.com/tomz-pointzeroai/30min';
+
+  function open() {
+    panel.classList.add('open');
+    if (!body.dataset.started) {
+      body.dataset.started = '1';
+      runStep1();
+    }
   }
-  .sophia-modal.open { display: flex; }
-  @keyframes sophiaFade { from { opacity: 0; } to { opacity: 1; } }
-  @keyframes sophiaSlide {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+  function close() { panel.classList.remove('open'); }
+
+  launcher.addEventListener('click', open);
+  closeBtn.addEventListener('click', close);
+
+  function scrollBody() {
+    requestAnimationFrame(function() { body.scrollTop = body.scrollHeight; });
   }
-  .sophia-panel {
-    background: white;
-    border-radius: 8px;
-    padding: 36px 32px 28px;
-    width: 100%;
-    max-width: 460px;
-    box-shadow: 0 30px 80px rgba(0,0,0,0.3);
-    position: relative;
-    animation: sophiaSlide 0.35s ease;
+
+  function showTyping() {
+    var el = document.createElement('div');
+    el.className = 'sophia2-typing';
+    el.innerHTML = '<span></span><span></span><span></span>';
+    body.appendChild(el);
+    scrollBody();
+    return el;
   }
-  .sophia-close {
-    position: absolute;
-    top: 14px; right: 18px;
-    background: none;
-    border: none;
-    font-size: 1.8rem;
-    color: var(--charcoal-soft);
-    cursor: pointer;
-    line-height: 1;
-    width: 32px; height: 32px;
-    border-radius: 50%;
-    transition: background 0.2s;
+
+  function sophiaSay(html) {
+    return new Promise(function(resolve) {
+      var t = showTyping();
+      setTimeout(function() {
+        t.remove();
+        var msg = document.createElement('div');
+        msg.className = 'sophia2-msg';
+        msg.innerHTML = html;
+        body.appendChild(msg);
+        scrollBody();
+        resolve();
+      }, TYPING_MS);
+    });
   }
-  .sophia-close:hover { background: var(--ivory-deep); color: var(--charcoal); }
-  .sophia-head {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid var(--ivory-deep);
-    margin-bottom: 20px;
+
+  function userSay(text) {
+    var u = document.createElement('div');
+    u.className = 'sophia2-user';
+    u.textContent = text;
+    body.appendChild(u);
+    scrollBody();
   }
-  .sophia-avatar-lg {
-    width: 48px; height: 48px;
-    border-radius: 50%;
-    background: var(--sage);
-    color: white;
-    display: flex; align-items: center; justify-content: center;
-    font-family: var(--serif);
-    font-size: 1.5rem;
-    font-weight: 600;
-    box-shadow: 0 4px 12px rgba(63, 92, 82, 0.25);
+
+  function clearActions() { actions.innerHTML = ''; }
+
+  function showOptions(opts) {
+    clearActions();
+    var wrap = document.createElement('div');
+    wrap.className = 'sophia2-options';
+    opts.forEach(function(o) {
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'sophia2-opt';
+      btn.textContent = o.label;
+      btn.addEventListener('click', function() {
+        userSay(o.label);
+        clearActions();
+        o.next();
+      });
+      wrap.appendChild(btn);
+    });
+    actions.appendChild(wrap);
+    scrollBody();
   }
-  .sophia-head strong {
-    display: block;
-    font-family: var(--serif);
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--charcoal);
-    line-height: 1.1;
+
+  function runStep1() {
+    sophiaSay("Hi &mdash; I'm Sophia. Welcome to Align North Scottsdale, a private studio for personal training and Pilates.")
+      .then(function() {
+        return sophiaSay("To get you to the right specialist, are you here for <em>Personal Training</em> or <em>Pilates</em>?");
+      })
+      .then(function() {
+        showOptions([
+          { label: 'Personal Training', next: function() { state.track = 'training'; runStep2A(); } },
+          { label: 'Pilates', next: function() { state.track = 'pilates'; runStep2B(); } },
+          { label: 'Both / Not sure yet', next: function() { state.track = 'both'; runStep2C(); } }
+        ]);
+      });
   }
-  .sophia-head span {
-    font-size: 0.78rem;
-    letter-spacing: 0.06em;
-    color: var(--charcoal-soft);
+
+  function runStep2A() {
+    sophiaSay("Great. What's bringing you in?").then(function() {
+      showOptions([
+        { label: 'General fitness', next: function() { state.intent = 'fitness'; runStep3(); } },
+        { label: 'Weight loss', next: function() { state.intent = 'weightloss'; runStep3(); } },
+        { label: 'Post-injury or rehab', next: function() { state.intent = 'rehab'; runStep3(); } },
+        { label: 'Posture, balance, mobility', next: function() { state.intent = 'mobility'; runStep3(); } }
+      ]);
+    });
   }
-  .sophia-msg p {
-    color: var(--charcoal);
-    font-size: 0.98rem;
-    line-height: 1.55;
-    margin-bottom: 12px;
+
+  function runStep2B() {
+    sophiaSay("Perfect. Have you done Pilates before?").then(function() {
+      showOptions([
+        { label: 'New to Pilates', next: function() { state.intent = 'new'; runStep3(); } },
+        { label: 'Some experience', next: function() { state.intent = 'some'; runStep3(); } },
+        { label: 'Returning after a break', next: function() { state.intent = 'returning'; runStep3(); } },
+        { label: 'Experienced practitioner', next: function() { state.intent = 'experienced'; runStep3(); } }
+      ]);
+    });
   }
-  .sophia-msg p:last-child { margin-bottom: 22px; }
-  .sophia-options {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+
+  function runStep2C() {
+    sophiaSay("That's most of our members &mdash; they do both. What's top of mind right now?").then(function() {
+      showOptions([
+        { label: 'Get stronger', next: function() { state.intent = 'stronger'; runStep3(); } },
+        { label: 'Move better, fewer aches', next: function() { state.intent = 'movebetter'; runStep3(); } },
+        { label: 'Recover from an injury', next: function() { state.intent = 'recover'; runStep3(); } },
+        { label: 'Just exploring', next: function() { state.intent = 'exploring'; runStep3(); } }
+      ]);
+    });
   }
-  .sophia-opt {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    padding: 14px 16px;
-    background: var(--ivory);
-    border: 1.5px solid var(--border);
-    border-radius: 4px;
-    text-decoration: none;
-    transition: all 0.2s;
+
+  function runStep3() {
+    sophiaSay("Got it. The next step is a 30-minute consultation &mdash; no commitment, just a conversation. What time of day usually works best?").then(function() {
+      showOptions([
+        { label: 'Morning (7am – 11am)', next: function() { state.timing = 'morning'; runStep4(); } },
+        { label: 'Afternoon (11am – 3pm)', next: function() { state.timing = 'afternoon'; runStep4(); } },
+        { label: 'Evening (3pm – 6pm)', next: function() { state.timing = 'evening'; runStep4(); } },
+        { label: 'Flexible', next: function() { state.timing = 'flexible'; runStep4(); } }
+      ]);
+    });
   }
-  .sophia-opt:hover {
-    background: var(--sage-light);
-    border-color: var(--sage);
-    transform: translateX(2px);
+
+  function buildCalendlyUrl() {
+    var params = new URLSearchParams({
+      utm_source: 'alignnorth',
+      utm_medium: 'sophia',
+      utm_campaign: state.track || '',
+      utm_content: state.intent || '',
+      utm_term: state.timing || '',
+      hide_gdpr_banner: '1'
+    });
+    return CALENDLY_URL + '?' + params.toString();
   }
-  .sophia-opt.pilates:hover { border-color: var(--sand); background: rgba(201, 168, 120, 0.12); }
-  .sophia-opt.subtle { background: white; }
-  .sophia-opt-icon {
-    width: 36px; height: 36px;
-    border-radius: 50%;
-    background: white;
-    color: var(--sage);
-    display: flex; align-items: center; justify-content: center;
-    font-family: var(--serif);
-    font-size: 1.15rem;
-    font-weight: 600;
-    flex-shrink: 0;
-    border: 1px solid var(--border);
+
+  function runStep4() {
+    sophiaSay("Perfect. Pick your time below.").then(function() {
+      clearActions();
+      var url = buildCalendlyUrl();
+      var wrap = document.createElement('div');
+      wrap.className = 'sophia2-cta-wrap';
+
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'sophia2-cta';
+      btn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg> <span>Open Booking Calendar</span>';
+      btn.addEventListener('click', function() {
+        if (window.Calendly && typeof window.Calendly.initPopupWidget === 'function') {
+          window.Calendly.initPopupWidget({ url: url });
+        } else {
+          window.open(url, '_blank', 'noopener');
+        }
+      });
+
+      var fb = document.createElement('a');
+      fb.className = 'sophia2-fallback';
+      fb.href = url;
+      fb.target = '_blank';
+      fb.rel = 'noopener';
+      fb.textContent = 'Or open in a new tab';
+
+      wrap.appendChild(btn);
+      wrap.appendChild(fb);
+      actions.appendChild(wrap);
+      scrollBody();
+    });
   }
-  .sophia-opt.pilates .sophia-opt-icon { color: var(--sand-deep); }
-  .sophia-opt > div { flex: 1; }
-  .sophia-opt strong {
-    display: block;
-    font-family: var(--sans);
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: var(--charcoal);
-    line-height: 1.2;
-  }
-  .sophia-opt span {
-    font-size: 0.8rem;
-    color: var(--charcoal-soft);
-  }
-  .sophia-opt-arrow {
-    font-size: 1.1rem;
-    color: var(--charcoal-soft);
-    transition: transform 0.2s;
-  }
-  .sophia-opt:hover .sophia-opt-arrow { transform: translateX(3px); color: var(--sage); }
-  .sophia-note {
-    margin-top: 22px;
-    text-align: center;
-    font-size: 0.82rem;
-    color: var(--charcoal-soft);
-  }
-</style>
+})();
+</script>
 
 </body>
 </html>
