@@ -1616,7 +1616,7 @@
   var body = document.getElementById('sophiaBody');
   var actions = document.getElementById('sophiaActions');
 
-  var state = { track: null, intent: null, timing: null };
+  var state = { track: null, intent: null, detail: null, timing: null };
   var TYPING_MS = 850;
   var CALENDLY_URL = 'https://calendly.com/tomz-pointzeroai/30min';
 
@@ -1707,10 +1707,20 @@
   function runStep2A() {
     sophiaSay("Great. What's bringing you in?").then(function() {
       showOptions([
-        { label: 'General fitness', next: function() { state.intent = 'fitness'; runStep3(); } },
-        { label: 'Weight loss', next: function() { state.intent = 'weightloss'; runStep3(); } },
-        { label: 'Post-injury or rehab', next: function() { state.intent = 'rehab'; runStep3(); } },
-        { label: 'Posture, balance, mobility', next: function() { state.intent = 'mobility'; runStep3(); } }
+        { label: 'General fitness', next: function() { state.intent = 'fitness'; runStep2A2(); } },
+        { label: 'Weight loss', next: function() { state.intent = 'weightloss'; runStep2A2(); } },
+        { label: 'Post-injury or rehab', next: function() { state.intent = 'rehab'; runStep2A2(); } },
+        { label: 'Posture, balance, mobility', next: function() { state.intent = 'mobility'; runStep2A2(); } }
+      ]);
+    });
+  }
+
+  function runStep2A2() {
+    sophiaSay("And &mdash; have you trained one-on-one with a private coach before?").then(function() {
+      showOptions([
+        { label: 'Yes, regularly', next: function() { state.detail = 'regular'; runStep3(); } },
+        { label: 'Years ago', next: function() { state.detail = 'lapsed'; runStep3(); } },
+        { label: 'No, never', next: function() { state.detail = 'never'; runStep3(); } }
       ]);
     });
   }
@@ -1718,10 +1728,22 @@
   function runStep2B() {
     sophiaSay("Perfect. Have you done Pilates before?").then(function() {
       showOptions([
-        { label: 'New to Pilates', next: function() { state.intent = 'new'; runStep3(); } },
-        { label: 'Some experience', next: function() { state.intent = 'some'; runStep3(); } },
-        { label: 'Returning after a break', next: function() { state.intent = 'returning'; runStep3(); } },
-        { label: 'Experienced practitioner', next: function() { state.intent = 'experienced'; runStep3(); } }
+        { label: 'New to Pilates', next: function() { state.intent = 'new'; runStep2B2(); } },
+        { label: 'Some experience', next: function() { state.intent = 'some'; runStep2B2(); } },
+        { label: 'Returning after a break', next: function() { state.intent = 'returning'; runStep2B2(); } },
+        { label: 'Experienced practitioner', next: function() { state.intent = 'experienced'; runStep2B2(); } }
+      ]);
+    });
+  }
+
+  function runStep2B2() {
+    sophiaSay("Anything specific you're working through? This helps us match you with the right instructor.").then(function() {
+      showOptions([
+        { label: 'Lower back', next: function() { state.detail = 'lowerback'; runStep3(); } },
+        { label: 'Hips & SI joint', next: function() { state.detail = 'hips'; runStep3(); } },
+        { label: 'Posture', next: function() { state.detail = 'posture'; runStep3(); } },
+        { label: 'Pelvic floor (pre/post-natal)', next: function() { state.detail = 'pelvicfloor'; runStep3(); } },
+        { label: 'Nothing specific', next: function() { state.detail = 'general'; runStep3(); } }
       ]);
     });
   }
@@ -1729,10 +1751,21 @@
   function runStep2C() {
     sophiaSay("That's most of our members &mdash; they do both. What's top of mind right now?").then(function() {
       showOptions([
-        { label: 'Get stronger', next: function() { state.intent = 'stronger'; runStep3(); } },
-        { label: 'Move better, fewer aches', next: function() { state.intent = 'movebetter'; runStep3(); } },
-        { label: 'Recover from an injury', next: function() { state.intent = 'recover'; runStep3(); } },
-        { label: 'Just exploring', next: function() { state.intent = 'exploring'; runStep3(); } }
+        { label: 'Get stronger', next: function() { state.intent = 'stronger'; runStep2C2(); } },
+        { label: 'Move better, fewer aches', next: function() { state.intent = 'movebetter'; runStep2C2(); } },
+        { label: 'Recover from an injury', next: function() { state.intent = 'recover'; runStep2C2(); } },
+        { label: 'Just exploring', next: function() { state.intent = 'exploring'; runStep2C2(); } }
+      ]);
+    });
+  }
+
+  function runStep2C2() {
+    sophiaSay("How often would you ideally want to train?").then(function() {
+      showOptions([
+        { label: '1x / week', next: function() { state.detail = '1x'; runStep3(); } },
+        { label: '2–3x / week', next: function() { state.detail = '2to3x'; runStep3(); } },
+        { label: '4+ / week', next: function() { state.detail = '4plus'; runStep3(); } },
+        { label: 'Not sure yet', next: function() { state.detail = 'unsure'; runStep3(); } }
       ]);
     });
   }
@@ -1755,6 +1788,7 @@
       utm_campaign: state.track || '',
       utm_content: state.intent || '',
       utm_term: state.timing || '',
+      detail: state.detail || '',
       hide_gdpr_banner: '1'
     });
     return CALENDLY_URL + '?' + params.toString();
