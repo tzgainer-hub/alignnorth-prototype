@@ -5,6 +5,65 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Align North Scottsdale — Private Personal Training & Pilates Studio</title>
 <meta name="description" content="Private studio in North Scottsdale — one-on-one and duet personal training and Pilates. General fitness, core stability, posture correction, weight loss. By appointment only." />
+<link rel="canonical" href="https://alignnorth-prototype-production.up.railway.app/" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ExerciseGym",
+  "name": "Align North Scottsdale",
+  "alternateName": "Align North",
+  "description": "A private studio for personal training and Pilates in North Scottsdale, Arizona. Private and duet sessions only — general fitness, core stability, posture correction, weight loss, and rehab.",
+  "url": "https://alignnorth-prototype-production.up.railway.app/",
+  "telephone": "+1-480-766-8601",
+  "priceRange": "$$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "33747 N. Scottsdale Rd, Suite 101 & 125",
+    "addressLocality": "Scottsdale",
+    "addressRegion": "AZ",
+    "postalCode": "85266",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 33.7902,
+    "longitude": -111.9215
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "07:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "description": "By appointment only"
+    }
+  ],
+  "areaServed": [
+    { "@type": "City", "name": "Scottsdale" },
+    { "@type": "City", "name": "North Scottsdale" },
+    { "@type": "City", "name": "Carefree" },
+    { "@type": "City", "name": "Cave Creek" },
+    "Troon",
+    "DC Ranch",
+    "Grayhawk",
+    "Desert Mountain",
+    "Pinnacle Peak"
+  ],
+  "makesOffer": [
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Private Personal Training" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Duet Personal Training" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Private Pilates" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Duet Pilates" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Physical Therapy" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Nutritional Counseling" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Massage Therapy" } }
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Fraunces:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -200,8 +259,23 @@
     max-width: 460px;
     display: block;
   }
-  .hero h1 { margin-bottom: 24px; color: white; }
+  .hero h1 {
+    margin-bottom: 14px;
+    color: white;
+    font-size: clamp(2.1rem, 4.6vw, 3.6rem);
+    line-height: 1.12;
+  }
   .hero h1 em { font-style: italic; color: var(--sand); font-weight: 400; }
+  .hero-tag {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(1.25rem, 2.2vw, 1.7rem);
+    color: var(--sand);
+    margin-bottom: 28px;
+    line-height: 1.2;
+    font-weight: 400;
+    letter-spacing: 0.005em;
+  }
   .hero-lead {
     font-size: 1.15rem;
     color: rgba(255, 255, 255, 0.92);
@@ -1183,7 +1257,8 @@
     <div class="hero-grid">
       <div>
         <div class="eyebrow">A Private Studio in North Scottsdale</div>
-        <h1>Movement<br/>that <em>aligns</em> you.</h1>
+        <h1>Private Personal Training<br/>&amp; Pilates in North Scottsdale</h1>
+        <p class="hero-tag"><em>Movement that aligns you.</em></p>
         <p class="hero-lead">
           Personal training and Pilates under one roof — private and duet sessions only,
           in a private studio built around how your body actually moves.
@@ -1315,7 +1390,7 @@
     <div class="ts-grid">
       <article class="ts-card">
         <div class="ts-portrait">
-          <img class="ts-photo" src="https://randomuser.me/api/portraits/women/65.jpg" alt="Rachel — Personal Trainer (placeholder photo)" loading="lazy" />
+          <img class="ts-photo" src="https://randomuser.me/api/portraits/women/65.jpg" alt="Rachel, personal trainer at Align North Scottsdale" loading="lazy" />
           <span class="ts-num">01</span>
         </div>
         <div class="ts-body">
@@ -1327,7 +1402,7 @@
 
       <article class="ts-card">
         <div class="ts-portrait">
-          <img class="ts-photo" src="https://randomuser.me/api/portraits/women/45.jpg" alt="Carmen — Personal Trainer (placeholder photo)" loading="lazy" />
+          <img class="ts-photo" src="https://randomuser.me/api/portraits/women/45.jpg" alt="Carmen, personal trainer at Align North Scottsdale" loading="lazy" />
           <span class="ts-num">02</span>
         </div>
         <div class="ts-body">
@@ -1339,7 +1414,7 @@
 
       <article class="ts-card">
         <div class="ts-portrait">
-          <img class="ts-photo" src="https://randomuser.me/api/portraits/women/89.jpg" alt="Laura — Personal Trainer (placeholder photo)" loading="lazy" />
+          <img class="ts-photo" src="https://randomuser.me/api/portraits/women/89.jpg" alt="Laura, personal trainer at Align North Scottsdale" loading="lazy" />
           <span class="ts-num">03</span>
         </div>
         <div class="ts-body">
@@ -1351,7 +1426,7 @@
 
       <article class="ts-card">
         <div class="ts-portrait">
-          <img class="ts-photo" src="https://randomuser.me/api/portraits/women/33.jpg" alt="Elisa — Physical Therapist (placeholder photo)" loading="lazy" />
+          <img class="ts-photo" src="https://randomuser.me/api/portraits/women/33.jpg" alt="Elisa, physical therapist at Align North Scottsdale" loading="lazy" />
           <span class="ts-num">04</span>
         </div>
         <div class="ts-body">
@@ -1363,7 +1438,7 @@
 
       <article class="ts-card">
         <div class="ts-portrait">
-          <img class="ts-photo" src="https://randomuser.me/api/portraits/women/12.jpg" alt="Viktoria — Pilates Instructor (placeholder photo)" loading="lazy" />
+          <img class="ts-photo" src="https://randomuser.me/api/portraits/women/12.jpg" alt="Viktoria, Pilates instructor at Align North Scottsdale" loading="lazy" />
           <span class="ts-num">05</span>
         </div>
         <div class="ts-body">
@@ -1375,7 +1450,7 @@
 
       <article class="ts-card">
         <div class="ts-portrait">
-          <img class="ts-photo" src="https://randomuser.me/api/portraits/women/76.jpg" alt="Evgeniya — Pilates Instructor (placeholder photo)" loading="lazy" />
+          <img class="ts-photo" src="https://randomuser.me/api/portraits/women/76.jpg" alt="Evgeniya, Pilates instructor at Align North Scottsdale" loading="lazy" />
           <span class="ts-num">06</span>
         </div>
         <div class="ts-body">
@@ -1394,7 +1469,7 @@
     <div class="section-head">
       <div class="eyebrow">What Our Members Say</div>
       <h2>Trusted by North Scottsdale.</h2>
-      <p>Real reviews from real clients — swap placeholder names &amp; quotes with the studio's verified Google reviews.</p>
+      <p><em>Sample review layout &mdash; the studio's verified Google reviews replace these before launch.</em></p>
     </div>
 
     <div class="quote-grid">
@@ -1406,10 +1481,7 @@
           <div class="review-avatar sage">M</div>
           <div>
             <div class="review-name">Michael R.</div>
-            <div class="review-verified">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="#4285F4"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-              Verified Google Review
-            </div>
+            <div class="review-verified">Sample review</div>
           </div>
         </div>
       </div>
@@ -1422,10 +1494,7 @@
           <div class="review-avatar sand">S</div>
           <div>
             <div class="review-name">Susan K.</div>
-            <div class="review-verified">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="#4285F4"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-              Verified Google Review
-            </div>
+            <div class="review-verified">Sample review</div>
           </div>
         </div>
       </div>
@@ -1438,10 +1507,7 @@
           <div class="review-avatar charcoal">D</div>
           <div>
             <div class="review-name">Diana W.</div>
-            <div class="review-verified">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="#4285F4"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-              Verified Google Review
-            </div>
+            <div class="review-verified">Sample review</div>
           </div>
         </div>
       </div>
@@ -1451,12 +1517,10 @@
       <div class="google-badge">
         <div class="google-g"></div>
         <div class="google-rating">
-          <strong>5.0 out of 5 Stars</strong>
-          <div class="stars">★★★★★</div>
-          <span>Based on verified Google reviews</span>
+          <strong>Real Google reviews go here</strong>
+          <span>Studio's verified rating &amp; reviews link in before launch.</span>
         </div>
       </div>
-      <a href="https://www.google.com/maps/search/Pilates+North+Scottsdale+33747+N+Scottsdale+Rd/@33.79,-111.92,14z" target="_blank" rel="noopener" class="reviews-cta-link">Read All Reviews →</a>
     </div>
   </div>
 </section>
@@ -1600,7 +1664,7 @@
     <div class="avatar" aria-hidden="true">S</div>
     <div class="head-meta">
       <span class="name">Sophia</span>
-      <span class="sub">Align North Scottsdale</span>
+      <span class="sub">Matches you with the right session</span>
     </div>
     <button type="button" class="sophia2-close" id="sophiaClose" aria-label="Close chat">&times;</button>
   </div>
