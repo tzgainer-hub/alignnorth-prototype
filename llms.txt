@@ -55,6 +55,7 @@ Also serving: Carefree, Cave Creek, Troon, DC Ranch, Grayhawk, Desert Mountain, 
 - Blog index: https://alignnorth-prototype-production.up.railway.app/blog
 - "Private Personal Training vs Group Classes" guide: https://alignnorth-prototype-production.up.railway.app/blog/private-personal-training-vs-group-classes
 - "Pilates Reformer vs Mat: A Beginner's Guide": https://alignnorth-prototype-production.up.railway.app/blog/pilates-reformer-vs-mat-guide
+- "Training for Longevity: A Plain-English Guide to Moving Well at Every Age": https://alignnorth-prototype-production.up.railway.app/blog/training-for-longevity-guide
 
 ## How to book
 
