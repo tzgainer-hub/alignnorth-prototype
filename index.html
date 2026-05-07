@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Align North Scottsdale — Private Personal Training & Pilates Studio</title>
-<meta name="description" content="Private studio in North Scottsdale — one-on-one and duet personal training and Pilates. General fitness, core stability, posture correction, weight loss. By appointment only." />
+<meta name="description" content="Private studio in North Scottsdale — one-on-one and duet personal training and Pilates focused on posture, movement quality, mobility, flexibility, and lifelong health. By appointment only." />
 <link rel="canonical" href="https://alignnorth-prototype-production.up.railway.app/" />
 <script type="application/ld+json">
 {
@@ -12,7 +12,7 @@
   "@type": "ExerciseGym",
   "name": "Align North Scottsdale",
   "alternateName": "Align North",
-  "description": "A private studio for personal training and Pilates in North Scottsdale, Arizona. Private and duet sessions only — general fitness, core stability, posture correction, weight loss, and rehab.",
+  "description": "A private studio for personal training and Pilates in North Scottsdale, Arizona. Private and duet sessions only — focused on posture, movement quality, mobility, flexibility, and lifelong health.",
   "url": "https://alignnorth-prototype-production.up.railway.app/",
   "telephone": "+1-480-766-8601",
   "priceRange": "$$$",
@@ -1366,21 +1366,22 @@
         <h1>Private Personal Training<br/>&amp; Pilates in North Scottsdale</h1>
         <p class="hero-tag"><em>Movement that aligns you.</em></p>
         <p class="hero-lead">
-          Personal training and Pilates under one roof — private and duet sessions only,
-          in a private studio built around how your body actually moves.
+          Personal training and Pilates focused on what your body actually does &mdash;
+          posture, movement, mobility, flexibility, and the kind of health that
+          keeps you doing what you love. Private and duet sessions only.
         </p>
 
         <div class="hero-paths">
           <a href="#training" class="path-card">
             <div class="path-icon">T</div>
             <h3>Personal Training</h3>
-            <p>General fitness, core stability, posture correction, weight loss — private or duet.</p>
+            <p>Posture, mobility, movement quality, and the strength to keep doing what you love &mdash; private or duet.</p>
             <span class="arrow">Explore →</span>
           </a>
           <a href="#pilates" class="path-card">
             <div class="path-icon">P</div>
             <h3>Pilates</h3>
-            <p>Reformer and mat — private and duet, precision for core, balance, flexibility.</p>
+            <p>Reformer and mat &mdash; private and duet, precision for posture, alignment, flexibility, and breath.</p>
             <span class="arrow">Explore →</span>
           </a>
         </div>
@@ -1409,8 +1410,9 @@
         <div class="practice-tag">Suite 101</div>
         <h3>Personal Training</h3>
         <p class="practice-desc">
-          Private and duet sessions on TechnoGym Selection, FreeMotion, and our 25-foot Kinesis Wall —
-          for general fitness, core stability, posture correction, and weight loss.
+          Private and duet sessions on TechnoGym Selection, FreeMotion, and our 25-foot Kinesis Wall &mdash;
+          built around posture, mobility, movement quality, and the kind of strength that keeps you
+          doing what you love at every age.
         </p>
         <ul class="practice-list">
           <li>Private Training (1-on-1 or Duet) <span class="price">By Consultation</span></li>
@@ -1427,7 +1429,8 @@
         <h3>Pilates</h3>
         <p class="practice-desc">
           Precise movement on reformer and mat. Private and duet sessions only,
-          with certified instructors who teach control, form, and breath.
+          with certified instructors who teach posture, alignment, flexibility, and breath
+          &mdash; for clients who want to move better through every stage of life.
         </p>
         <ul class="practice-list">
           <li>30-Minute Private <span class="price">$50</span></li>
@@ -1453,7 +1456,7 @@
       <div class="service-tile">
         <span class="num">— 01</span>
         <h4>Personal Training</h4>
-        <p>Private and duet programs on TechnoGym and FreeMotion equipment — for general fitness, core stability, posture, and weight loss.</p>
+        <p>Private and duet programs focused on posture, mobility, movement quality, and the strength to keep doing what you love at every age.</p>
       </div>
       <div class="service-tile">
         <span class="num">— 02</span>
@@ -1640,15 +1643,15 @@
       </div>
       <div class="why-content">
         <div class="eyebrow">Why Align North</div>
-        <h2>Optimal fitness through<br/>every stage of life.</h2>
+        <h2>Move better through<br/>every stage of life.</h2>
         <p>
           Most studios train you in a group. We don't. Every session is <em>private or duet</em>,
-          in a studio built around how you actually live — with attention to posture, balance,
-          joint health, and the way your body is built to move at this point in your life.
+          focused on posture, movement quality, mobility, flexibility, and the kind of health
+          that keeps you doing what you love &mdash; at this point in your life and the next one.
         </p>
         <p>
           Equipment matters. Programming matters more. Every session is built one client
-          at a time, by a specialist who knows your history.
+          at a time, by a specialist who knows your history and watches how your body actually moves.
         </p>
         <div class="why-stats">
           <div>
@@ -1950,10 +1953,10 @@
   function runStep2A() {
     sophiaSay("Great. What's bringing you in?").then(function() {
       showOptions([
-        { label: 'General fitness', next: function() { state.intent = 'fitness'; runStep2A2(); } },
-        { label: 'Weight loss', next: function() { state.intent = 'weightloss'; runStep2A2(); } },
-        { label: 'Post-injury or rehab', next: function() { state.intent = 'rehab'; runStep2A2(); } },
-        { label: 'Posture, balance, mobility', next: function() { state.intent = 'mobility'; runStep2A2(); } }
+        { label: 'Posture & alignment', next: function() { state.intent = 'posture'; runStep2A2(); } },
+        { label: 'Mobility & flexibility', next: function() { state.intent = 'mobility'; runStep2A2(); } },
+        { label: 'Healthy aging / longevity', next: function() { state.intent = 'aging'; runStep2A2(); } },
+        { label: 'Post-injury or rehab', next: function() { state.intent = 'rehab'; runStep2A2(); } }
       ]);
     });
   }
