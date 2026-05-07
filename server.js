@@ -11,6 +11,10 @@ app.get('/blog', (req, res) => {
   res.sendFile(path.join(__dirname, 'blog.html'));
 });
 
+app.get('/founder', (req, res) => {
+  res.sendFile(path.join(__dirname, 'founder.html'));
+});
+
 app.get('/blog/:slug', (req, res) => {
   const slug = req.params.slug.replace(/[^a-z0-9-]/gi, '');
   const file = path.join(__dirname, `blog-${slug}.html`);

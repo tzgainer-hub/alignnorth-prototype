@@ -27,6 +27,21 @@ Hours: Monday–Friday 7am–6pm, Saturday by appointment, Sunday closed.
 
 Personal training, physical therapy, nutritional counseling, and massage therapy are priced by consultation.
 
+## Founder
+
+**Dr. Glen J. Tanner, DC, CCSMS, TPI** — Founder of Align North Scottsdale; owner and chiropractor at Tanner Chiropractic in Scottsdale.
+
+- Doctor of Chiropractic, Palmer College of Chiropractic West (San Jose, California)
+- Over 20 years in private practice
+- Certified Chiropractic Sports Medicine Specialist (CCSMS)
+- Post-Graduate Certification in Sports Rehabilitation and Physiotherapy, University of Bridgeport
+- Titleist Performance Institute (TPI) Level 1 Golf Fitness + Level 2 Golf Injuries
+- Certified Exercise Strength and Conditioning Specialist
+- Clinical Nutrition Certification, Cleveland Chiropractic College
+- Notable work: physician and corner man for boxing world champions; physician for world-class professional golfers; developed the Golfer's Edge program for the Desert Mountain golf community in North Scottsdale.
+- Specialty focus: athletic injury, biomechanics, musculoskeletal injury correction and prevention.
+- Founded Align North Scottsdale because chiropractic treatment alone wasn't enough — patients needed a private practice where their bodies could be retrained between visits, with instructors who understood movement at a clinical level.
+
 ## Who works here
 
 - **Rachel** — Personal Trainer. NASM-CPT, Corrective Exercise Specialist. 12 years private clients. Specialty: rebuilding strength after injury, surgery, or long breaks. Posture, gait, small stabilizers.
@@ -51,6 +66,7 @@ Also serving: Carefree, Cave Creek, Troon, DC Ranch, Grayhawk, Desert Mountain, 
 ## Key URLs
 
 - Homepage: https://alignnorth-prototype-production.up.railway.app/
+- Founder profile (Dr. Glen J. Tanner): https://alignnorth-prototype-production.up.railway.app/founder
 - Begin Consultation (intake form): https://alignnorth-prototype-production.up.railway.app/intake.html
 - Blog index: https://alignnorth-prototype-production.up.railway.app/blog
 - "Private Personal Training vs Group Classes" guide: https://alignnorth-prototype-production.up.railway.app/blog/private-personal-training-vs-group-classes
