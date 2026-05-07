@@ -1,0 +1,63 @@
+# Align North Scottsdale
+
+> A private studio for personal training and Pilates in North Scottsdale, Arizona. Private and duet sessions only — general fitness, core stability, posture correction, weight loss, and rehabilitation. Six certified specialists working under one roof at 33747 N. Scottsdale Rd, Suites 101 & 125.
+
+## What we are
+
+Align North Scottsdale is a private fitness and Pilates studio at 33747 N. Scottsdale Rd, Scottsdale, AZ 85266. We operate two adjacent suites: Suite 101 for personal training and physical therapy, Suite 125 for Pilates. Same phone, same staff, one brand. By appointment only — no walk-ins, no group classes.
+
+Phone: (480) 766-8601
+Hours: Monday–Friday 7am–6pm, Saturday by appointment, Sunday closed.
+
+## What we do
+
+- **Private personal training** (1-on-1 or duet) on TechnoGym Selection, FreeMotion, and a 25-foot Kinesis Wall — for general fitness, core stability, posture correction, and weight loss.
+- **Private Pilates** (1-on-1 or duet) on reformer, mat, and apparatus — for core, balance, flexibility, and rehabilitative work including pre/post-natal and pelvic floor.
+- **Physical therapy** with a Doctor of Physical Therapy (DPT) on staff, integrated with training programs so recovery and conditioning aren't separate appointments.
+- **Nutritional counseling** focused on sustainable strategy for body composition, metabolic health, and aging well.
+- **Massage therapy** for recovery and movement support.
+
+## Pricing (Pilates, single-session)
+
+- 30-minute private: $50
+- 60-minute private: $85
+- Duet (two people, one instructor): $100
+- 12-session package: $960
+- 24-session package: $1,800
+
+Personal training, physical therapy, nutritional counseling, and massage therapy are priced by consultation.
+
+## Who works here
+
+- **Rachel** — Personal Trainer. NASM-CPT, Corrective Exercise Specialist. 12 years private clients. Specialty: rebuilding strength after injury, surgery, or long breaks. Posture, gait, small stabilizers.
+- **Carmen** — Personal Trainer. NSCA-CSCS, Precision Nutrition Level 1. Specialty: body composition — weight loss, muscle definition, metabolic health. Bilingual English/Spanish. 8 years private studios.
+- **Laura** — Personal Trainer. ACE-CPT, Functional Aging Specialist. Specialty: clients 55+ who want to keep doing what they love. Background in orthopedic rehab.
+- **Elisa** — Physical Therapist. DPT, 14 years orthopedic and post-surgical rehab. Specialty: joint replacement, rotator cuff, chronic back/knee pain. Manual therapy, dry needling, movement screening certified.
+- **Viktoria** — Pilates Instructor. BASI comprehensive certification with Romana's classical lineage. Specialty: precise cueing, alignment. 12 years teaching reformer, mat, apparatus. Russian-trained dancer.
+- **Evgeniya** — Pilates Instructor. PMA-Certified through Polestar. Specialty: rehabilitative and pre/post-natal Pilates, pelvic floor, core, breath. 10 years private studios across two countries.
+
+## Service area
+
+Primary: North Scottsdale (85266 and surrounding zip codes).
+Also serving: Carefree, Cave Creek, Troon, DC Ranch, Grayhawk, Desert Mountain, Pinnacle Peak.
+
+## Positioning
+
+- Private and duet sessions only. We do not offer group fitness or group Pilates classes.
+- Most members do both training and Pilates — strength training to build, Pilates to refine.
+- Audience: clients seeking a private studio, with specific goals (general fitness, core stability, posture correction, weight loss, rehab, healthy aging) that benefit from individualized programming.
+- Differentiator: physical therapy on-site and integrated with training, so recovery is not a separate appointment with a separate provider.
+
+## Key URLs
+
+- Homepage: https://alignnorth-prototype-production.up.railway.app/
+- Begin Consultation (intake form): https://alignnorth-prototype-production.up.railway.app/intake.html
+- Blog index: https://alignnorth-prototype-production.up.railway.app/blog
+- "Private Personal Training vs Group Classes" guide: https://alignnorth-prototype-production.up.railway.app/blog/private-personal-training-vs-group-classes
+- "Pilates Reformer vs Mat: A Beginner's Guide": https://alignnorth-prototype-production.up.railway.app/blog/pilates-reformer-vs-mat-guide
+
+## How to book
+
+1. Sophia, the chat assistant on the homepage (bottom-right corner), qualifies the visitor across 3 questions and routes them to a 30-minute consultation booking.
+2. Direct: visit /intake.html or call (480) 766-8601.
+3. The first 30 minutes are always a consultation, no commitment, before any membership or session purchase.

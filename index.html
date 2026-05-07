@@ -64,6 +64,64 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you offer group classes?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Every session at Align North is private (one-on-one) or duet (two people, one instructor). The kind of work we do — weight loss, posture correction, post-injury recovery, healthy aging — requires the program to fit the person." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between private and duet sessions?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A private session is one-on-one with the instructor. A duet is two clients sharing one instructor, typically a spouse, friend, or sibling. Duets cost roughly half of two privates per person while keeping most of the personalization." }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does private personal training cost at Align North?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Personal training is priced by consultation. Pilates pricing is published: $50 for a 30-minute private, $85 for a 60-minute private, $100 for a duet, $960 for a 12-pack, $1,800 for a 24-pack." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to be fit before starting?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Clients who haven't trained in years, or who have current injuries, are exactly who private studios are built for. We start where you are and progress from there." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I train if I have back pain or a previous injury?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Our on-staff Doctor of Physical Therapy works alongside training programs so recovery and conditioning happen in the same studio with the same team. For active or recent injuries, we start conservatively and clear you for harder work as your body responds." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you work with adults over 50 and 60?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Most of our member base is 50+. Our Functional Aging Specialist works specifically with clients 55+ who want to keep doing what they love — golf, hiking, tennis, picking up grandchildren — with strong joints and a stable spine." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between Pilates reformer and mat?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Mat Pilates uses bodyweight on a padded mat. Reformer Pilates uses a sliding-carriage apparatus with springs that provide adjustable resistance. We teach both. Most beginners get faster results starting on the reformer with a private instructor." }
+    },
+    {
+      "@type": "Question",
+      "name": "How is physical therapy integrated with training?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Our Doctor of Physical Therapy works on-site in the same studio as our trainers. When a client is in active rehab and starting to return to exercise, the PT and trainer build the program together — recovery isn't a separate appointment with a separate provider on a separate day." }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should I train to see results?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Two sessions per week is the minimum for measurable change in 6–8 weeks. Three is the sweet spot for most beginners. One session a week maintains awareness but doesn't progress quickly." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I have to commit to a package upfront?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. The first 30 minutes are always a consultation — no payment, no commitment. Most clients start with a small package before deciding on a longer commitment." }
+    }
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Fraunces:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -855,6 +913,52 @@
   }
   .map-frame iframe { width: 100%; height: 100%; border: 0; }
 
+  /* FAQ */
+  .faq {
+    padding: 120px 0;
+    background: white;
+  }
+  .faq-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+  .faq-item {
+    background: var(--ivory);
+    border: 1px solid var(--ivory-deep);
+    border-radius: 6px;
+    padding: 26px 28px;
+    transition: border-color 0.25s, transform 0.25s;
+  }
+  .faq-item:hover {
+    border-color: rgba(184, 155, 94, 0.4);
+    transform: translateY(-2px);
+  }
+  .faq-q {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: var(--charcoal);
+    margin-bottom: 10px;
+    line-height: 1.3;
+    letter-spacing: -0.005em;
+  }
+  .faq-a {
+    color: var(--charcoal-soft);
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin: 0;
+  }
+  .faq-a a { color: var(--sage); font-weight: 500; }
+  .faq-a a:hover { color: var(--sage-deep); }
+  @media (max-width: 760px) {
+    .faq { padding: 72px 0; }
+    .faq-grid { grid-template-columns: 1fr; gap: 14px; }
+    .faq-item { padding: 22px 22px; }
+  }
+
   /* FOOTER */
   footer {
     background: var(--charcoal);
@@ -1240,6 +1344,8 @@
       <a href="#training">Personal Training</a>
       <a href="#pilates">Pilates</a>
       <a href="#team">Team</a>
+      <a href="/blog">Blog</a>
+      <a href="#faq">FAQ</a>
       <a href="#visit">Visit</a>
       <a href="intake.html" class="btn btn-primary">Begin Consultation</a>
     </div>
@@ -1563,6 +1669,74 @@
   </div>
 </section>
 
+<!-- FAQ / COMMON QUESTIONS -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Common Questions</div>
+      <h2>What people ask before they start.</h2>
+      <p>The questions our consultations answer most often. If yours isn't here, ask Sophia or call (480) 766-8601.</p>
+    </div>
+
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h3 class="faq-q">Do you offer group classes?</h3>
+        <p class="faq-a">No. Every session at Align North is private (one-on-one) or duet (two people, one instructor). The kind of work we do — weight loss, posture correction, post-injury recovery, healthy aging — requires the program to fit the person. Group classes don't allow that level of customization.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-q">What's the difference between private and duet sessions?</h3>
+        <p class="faq-a">A private session is one-on-one with the instructor. A duet is two clients sharing one instructor — typically a spouse, a friend, or a sibling working out together. Duets cost roughly half of two private sessions per person while keeping most of the personalization. They're one of the highest-adherence formats we offer.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-q">How much does private personal training cost?</h3>
+        <p class="faq-a">Personal training is priced by consultation. The 30-minute consultation determines the right format (private vs duet), frequency, and program type — and pricing is set from there. Pilates pricing is published: $50 for a 30-minute private, $85 for a 60-minute private, $100 for a duet, $960 for a 12-pack, $1,800 for a 24-pack.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-q">Do I need to be fit before starting?</h3>
+        <p class="faq-a">No. The opposite is true — clients who haven't trained in years, or who have current injuries, are exactly who private studios are built for. We start where you are, build a program around what your body can actually do today, and progress from there.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-q">Can I train if I have back pain or a previous injury?</h3>
+        <p class="faq-a">Yes — many of our clients start after surgery, injury, or chronic pain. Elisa, our on-staff Doctor of Physical Therapy, often works alongside training programs so recovery and conditioning happen in the same studio, with the same team. For active or recent injuries, we'll start conservatively and clear you for harder work as your body responds.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-q">Do you work with adults over 50 and 60?</h3>
+        <p class="faq-a">Most of our member base is 50+. Laura is our Functional Aging Specialist and works specifically with clients 55+ who want to keep doing what they love — golf, hiking, tennis, picking up grandchildren — with strong joints and a stable spine. The program for someone 65 looks different from the program for someone 30, and that's the point of working in a private studio.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-q">What's the difference between Pilates reformer and mat?</h3>
+        <p class="faq-a">Mat Pilates uses bodyweight on a padded mat. Reformer Pilates uses a sliding-carriage apparatus with springs that provide adjustable resistance. We teach both. Most beginners get faster results starting on the reformer with a private instructor — the springs make it easier to feel the right muscles working. <a href="/blog/pilates-reformer-vs-mat-guide">Full guide here.</a></p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-q">How is physical therapy integrated with training?</h3>
+        <p class="faq-a">Elisa, our Doctor of Physical Therapy, works on-site in the same studio as our trainers. When a client is in active rehab and starting to return to exercise, the PT and the trainer build the program together — meaning recovery isn't a separate appointment with a separate provider on a separate day. This integration is unusual outside of clinical settings and is one of the main reasons clients choose us over a standard gym.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-q">How often should I train to see results?</h3>
+        <p class="faq-a">Two sessions per week is the minimum for measurable change in 6–8 weeks. Three is the sweet spot for most beginners. One session a week maintains awareness but doesn't progress quickly. The right frequency depends on your goal, recovery, and life — your trainer will recommend based on your consultation.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-q">Do I have to commit to a package upfront?</h3>
+        <p class="faq-a">No. The first 30 minutes are always a consultation — no payment, no commitment. From there, most clients start with a small package (12 sessions for Pilates, an equivalent for training) before deciding on a longer commitment. We'd rather you commit when you're confident than feel locked in early.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-q">What's the easiest way to start?</h3>
+        <p class="faq-a">Use Sophia (the chat assistant in the bottom-right corner of this page) to walk through three short questions and book a 30-minute consultation. Or call us directly at <a href="tel:4807668601">(480) 766-8601</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- INTAKE CTA -->
 <section class="intake-cta">
   <div class="container">
@@ -1597,6 +1771,10 @@
           <div class="info-label">Hours</div>
           <div class="info-value">Mon–Fri 7am–6pm<br/>Sat by Appointment · Sun Closed</div>
         </div>
+        <div class="info-block">
+          <div class="info-label">Serving</div>
+          <div class="info-value" style="font-size: 1rem; line-height: 1.55;">North Scottsdale, Carefree, Cave Creek, Troon, DC Ranch, Grayhawk, Desert Mountain &amp; Pinnacle Peak.</div>
+        </div>
       </div>
       <div class="map-frame">
         <iframe
@@ -1623,6 +1801,7 @@
           <li><a href="#training">Personal Training</a></li>
           <li><a href="#pilates">Pilates</a></li>
           <li><a href="#team">Team</a></li>
+          <li><a href="/blog">Blog</a></li>
           <li><a href="intake.html">Begin Consultation</a></li>
         </ul>
       </div>

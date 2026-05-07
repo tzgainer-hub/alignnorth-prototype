@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Align North Blog — Plain-English Guides for Private Training & Pilates</title>
+<meta name="description" content="Honest, plain-English guides on private personal training, Pilates, and healthy aging — written by the Align North Scottsdale studio team. No fluff, no hype." />
+<link rel="canonical" href="https://alignnorth-prototype-production.up.railway.app/blog" />
+<meta property="og:title" content="The Align North Blog — Plain-English Guides for Private Training &amp; Pilates" />
+<meta property="og:description" content="Honest guides on private personal training, Pilates, and healthy aging from the Align North Scottsdale studio team." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://alignnorth-prototype-production.up.railway.app/blog" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "The Align North Blog",
+  "description": "Plain-English guides on private personal training, Pilates, and healthy aging from the Align North Scottsdale studio team.",
+  "url": "https://alignnorth-prototype-production.up.railway.app/blog",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Align North Scottsdale",
+    "url": "https://alignnorth-prototype-production.up.railway.app/"
+  }
+}
+</script>
+<style>
+  :root {
+    --sage: #5a7a6e;
+    --sage-deep: #3f5c52;
+    --sage-light: #e8efe9;
+    --sand: #c9a878;
+    --sand-deep: #a8895d;
+    --ivory: #faf7f2;
+    --ivory-deep: #f0ebe0;
+    --charcoal: #2a2a2a;
+    --charcoal-soft: #5a5a5a;
+    --serif: "Cormorant Garamond", Georgia, serif;
+    --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans);
+    color: var(--charcoal);
+    background: var(--ivory);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--sage); text-decoration: none; }
+  a:hover { color: var(--sage-deep); text-decoration: underline; }
+  img { max-width: 100%; display: block; }
+  .container { max-width: 1240px; margin: 0 auto; padding: 0 32px; }
+  h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; line-height: 1.15; letter-spacing: -0.01em; color: var(--charcoal); }
+
+  .topbar {
+    background: var(--charcoal);
+    color: var(--ivory-deep);
+    font-size: 0.78rem;
+    padding: 10px 0;
+    letter-spacing: 0.02em;
+  }
+  .topbar .container { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
+  .topbar-info { display: flex; gap: 28px; flex-wrap: wrap; }
+  .topbar-info span { opacity: 0.85; }
+  .topbar a { color: var(--sand); font-weight: 500; }
+
+  nav.main {
+    position: sticky;
+    top: 0;
+    background: rgba(250, 247, 242, 0.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    z-index: 100;
+  }
+  nav.main .container { display: flex; justify-content: space-between; align-items: center; padding-top: 22px; padding-bottom: 22px; }
+  .logo { font-family: var(--serif); font-size: 1.6rem; font-weight: 600; color: var(--charcoal); line-height: 1; }
+  .logo .accent { color: var(--sage); }
+  .logo-sub { display: block; font-family: var(--sans); font-size: 0.65rem; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--sand-deep); margin-top: 4px; }
+  .nav-links { display: flex; gap: 32px; align-items: center; }
+  .nav-links a { font-size: 0.875rem; font-weight: 500; color: var(--charcoal); }
+  .nav-links a:hover { color: var(--sage); text-decoration: none; }
+  .nav-cta {
+    display: inline-flex;
+    background: var(--sage);
+    color: white !important;
+    padding: 11px 22px;
+    border-radius: 2px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: background 0.2s;
+  }
+  .nav-cta:hover { background: var(--sage-deep); text-decoration: none; }
+
+  main { padding: 80px 0 100px; }
+  .blog-header { text-align: center; max-width: 760px; margin: 0 auto 64px; }
+  .eyebrow { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--sage); margin-bottom: 18px; }
+  .blog-header h1 { font-size: clamp(2.6rem, 5vw, 4rem); margin-bottom: 18px; }
+  .blog-header h1 em { font-style: italic; color: var(--sand); font-weight: 400; }
+  .blog-header p { font-family: var(--serif); font-style: italic; font-size: 1.3rem; color: var(--charcoal-soft); line-height: 1.5; }
+
+  .post-grid { display: grid; gap: 24px; max-width: 880px; margin: 0 auto; }
+  .post-card {
+    background: white;
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: 6px;
+    padding: 36px 36px;
+    transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+  }
+  .post-card:hover {
+    border-color: rgba(184, 155, 94, 0.45);
+    transform: translateY(-3px);
+    box-shadow: 0 18px 44px rgba(63, 92, 82, 0.1);
+  }
+  .post-card a { color: inherit; text-decoration: none; display: block; }
+  .post-meta { font-size: 0.75rem; color: var(--sand-deep); text-transform: uppercase; letter-spacing: 0.16em; font-weight: 600; margin-bottom: 14px; }
+  .post-title { font-size: 1.85rem; margin-bottom: 12px; line-height: 1.2; }
+  .post-summary { color: var(--charcoal-soft); margin-bottom: 18px; font-size: 1rem; }
+  .post-readmore { color: var(--sage); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
+
+  .empty-card {
+    background: rgba(255,255,255,0.4);
+    border: 1px dashed rgba(0,0,0,0.15);
+    border-radius: 6px;
+    padding: 22px;
+    text-align: center;
+    color: var(--charcoal-soft);
+    font-size: 0.92rem;
+    font-style: italic;
+    font-family: var(--serif);
+  }
+
+  footer { background: var(--charcoal); color: rgba(250, 247, 242, 0.7); padding: 56px 0 28px; font-size: 0.88rem; margin-top: 80px; }
+  .footer-bottom { text-align: center; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 0.78rem; color: rgba(250, 247, 242, 0.45); }
+  footer .footer-top { text-align: center; margin-bottom: 24px; }
+  footer .footer-top a { color: var(--sand); margin: 0 12px; }
+
+  @media (max-width: 700px) {
+    .nav-links a:not(.nav-cta) { display: none; }
+    .post-card { padding: 28px 24px; }
+    .post-title { font-size: 1.4rem; }
+    main { padding: 56px 0 72px; }
+    .container { padding: 0 20px; }
+    .topbar-info { gap: 14px; }
+    .topbar { font-size: 0.72rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-info">
+      <span>33747 N. Scottsdale Rd · Scottsdale, AZ 85266</span>
+      <span>Mon–Fri 7am–6pm · Sat by Appt</span>
+    </div>
+    <div><a href="tel:4807668601">(480) 766-8601</a></div>
+  </div>
+</div>
+
+<nav class="main">
+  <div class="container">
+    <a href="/" class="logo">
+      Align <span class="accent">North</span> Scottsdale
+      <span class="logo-sub">Personal Training · Pilates</span>
+    </a>
+    <div class="nav-links">
+      <a href="/#training">Training</a>
+      <a href="/#pilates">Pilates</a>
+      <a href="/#team">Team</a>
+      <a href="/blog">Blog</a>
+      <a href="/intake.html" class="nav-cta">Begin Consultation</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="container">
+    <div class="blog-header">
+      <div class="eyebrow">The Align North Blog</div>
+      <h1>Plain-English Guides for <em>Movement</em>, <em>Strength</em>, and <em>Aging Well</em></h1>
+      <p>Honest answers to the questions our members actually ask &mdash; about private training, Pilates, recovery, and how to keep doing what you love through every stage of life.</p>
+    </div>
+
+    <div class="post-grid">
+
+      <article class="post-card">
+        <a href="/blog/private-personal-training-vs-group-classes">
+          <div class="post-meta">May 6, 2026 · 8 min read · Personal Training</div>
+          <h2 class="post-title">Private Personal Training vs Group Classes: Which Is Right for You?</h2>
+          <p class="post-summary">Group classes are cheaper, more social, and easier to commit to. Private training is more expensive, more accountable, and built around your body. Here's the honest tradeoff &mdash; and how to know which one will actually move the needle for you.</p>
+          <span class="post-readmore">Read the full guide →</span>
+        </a>
+      </article>
+
+      <article class="post-card">
+        <a href="/blog/pilates-reformer-vs-mat-guide">
+          <div class="post-meta">May 6, 2026 · 7 min read · Pilates</div>
+          <h2 class="post-title">Pilates Reformer vs Mat: A Beginner's Guide</h2>
+          <p class="post-summary">If you're new to Pilates, the reformer-vs-mat question is the first one to answer. They look different, feel different, and serve different goals. A Pilates instructor's plain-English breakdown &mdash; with the answer to "where should I start?"</p>
+          <span class="post-readmore">Read the full guide →</span>
+        </a>
+      </article>
+
+      <div class="empty-card">More guides coming soon &mdash; new post every two weeks.</div>
+
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <a href="/">Home</a>
+      <a href="/#training">Training</a>
+      <a href="/#pilates">Pilates</a>
+      <a href="/#team">Team</a>
+      <a href="/#visit">Visit</a>
+      <a href="/intake.html">Begin Consultation</a>
+    </div>
+    <div class="footer-bottom">
+      © 2026 Align North Scottsdale · 33747 N. Scottsdale Rd, Scottsdale, AZ 85266 · (480) 766-8601
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
